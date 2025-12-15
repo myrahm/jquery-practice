@@ -196,7 +196,7 @@ $(document).ready(function() {
                    // add curved text
                    const $text = $(`
                        <div id="curved-text">
-                           <span class="curved-line">cat on the beach</span>
+                           <span class="curved-line">cat outside a house fire?!</span>
                        </div>
                    `);
                    $container.append($text);
