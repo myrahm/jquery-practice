@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="script.js" defer></script>
+   <title>Lab 05</title>
+
+
+   <style>
+       body {
+           font-family: "Lexend", sans-serif;
+           margin: 30px;
+           line-height: 35px;
+       }
+
+       .problem-box {
+           border: 1px solid #9d9b9b;
+           padding: 20px;
+           margin-bottom: 30px;
+           border-radius: 8px;
+       }
+
+       #p1-form div {
+           margin-bottom: 10px;
+       }
+
+
+       #p1-output {
+           margin-top: 20px;
+           padding: 15px;
+           border: 3px solid #0056b3;
+           border-radius: 10px;
+           background-color: #f0f8ff;
+           min-height: 50px;
+       }
+
+
+       #submit-btn{
+           background-color: #0056b3;
+           color: white;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 10px;
+           cursor: pointer;
+           font-size: 10px;
+           font-weight: bold;
+           text-transform: uppercase;
+       }
+
+       #p2 {
+           position: fixed;
+           bottom: 15px;
+           right: 15px;
+           font-size: 50px;
+           color: #0056b3;
+           background-color: #fff;
+           border: 1px solid #0056b3;
+           border-radius: 10px;
+           padding: 10px 15px;
+       }
+
+       #p3-container {
+           position: relative;
+           width: 300px;
+           height: 200px;
+           overflow: hidden;
+       }
+       #p3-image {
+           width: 100%;
+           height: 100%;
+           cursor: pointer;
+           position: relative;
+           object-fit: cover;
+           transition: box-shadow 0.3s;
+       }
+       #p3-image:hover {
+           box-shadow: 0 0 20px #0056b3;
+       }
+
+
+       #curved-text {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           font-size: 30px;
+           color: #0056b3;     
+           font-weight: bold;
+       }
+
+
+       .curved-line {
+           display: inline-block;
+           color: #0056b3;
+           background-color: #fff;
+           letter-spacing: 2px;
+           transform: rotate(-5deg) skewX(-5deg);
+       }
+
+
+       #reset-icon {
+           color: white;
+           background: #0056b3;
+           font-size: 30px;
+           position: absolute;
+           bottom: 10px;
+           right: 10px;
+           border-radius: 50%;
+           padding: 8px;
+           cursor: pointer;
+       }
+
+
+   </style>
+</head>
+
+
+<body>
+
+
+   <h1>Lab 5</h1>
+   <hr>
+
+   <div class="problem-box" id="p1">
+     
+           <h2>Submission Form</h2>
+
+
+           <form id="p1-form">
+               <div>
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" required value="Myrah">
+               </div>
+               <div>
+                   <label for="address">Address:</label>
+                   <input type="text" id="address" required>
+               </div>
+               <div>
+                   <label for="phone">Phone #:</label>
+                   <input type="text" id="phone" placeholder="(xxx) xxx-xxxx" required value="(123) 456-7890">
+               </div>
+
+
+               <p>Click the button below to submit and view the results below the line:</p>
+               <button type="button" id="submit-btn">Submit</button>
+           </form>
+
+
+           <div id="p1-output">
+               <div id="p1name" class="p1display">
+                   <h3>Name</h3>
+               </div>
+               <div id="p1address" class="p1display">
+                   <h3>Address</h3>
+               </div>
+               <div id="p1phone" class="p1display">
+                   <h3>Phone Number</h3>
+               </div>
+           </div>
+          
+   </div>
+
+   <div id="p2">HH:MM:SS</div>
+
+
+
+   <div class="problem-box" id="p3">
+       <h2>Picture Animation</h2>
+       <p>Click the image to enlarge it. Click the blue arrow icon to shrink it back.</p>
+       <div id="p3-container">
+           <img id="p3-image" src="cat.jpg" alt="A funny cat">
+       </div>
+   </div>
+  
+
+
+</body>
+</html>
+
+
+
+
